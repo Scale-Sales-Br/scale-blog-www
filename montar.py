@@ -179,6 +179,7 @@ PAGINA = '''<!doctype html>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{b}/estilo.css">
+<link rel="alternate" type="application/xml" title="Artigos da Scale Sales" href="{b}/sitemap.xml">
 <script type="application/ld+json">{ld}</script>
 </head>
 <body>
@@ -322,6 +323,17 @@ def montar_indice(metas):
 </div></header>
 <div class="w"><div class="grade">{cartoes}</div>{convite}<div style="height:60px"></div></div>'''.format(
         cartoes=cartoes, convite=CONVITE.format(diag=DIAG))
+
+    hoje = max([m["data"] for m in metas], default=datetime.date.today().isoformat())
+    urls = ['<url><loc>%s%s/</loc><lastmod>%s</lastmod>'
+            '<changefreq>daily</changefreq><priority>0.9</priority></url>' % (SITE, BASE, hoje)]
+    urls += ['<url><loc>%s%s/%s/</loc><lastmod>%s</lastmod>'
+             '<changefreq>monthly</changefreq><priority>0.8</priority></url>'
+             % (SITE, BASE, m["slug"], m["data"]) for m in metas]
+    io.open(os.path.join(AQUI, "sitemap.xml"), "w", encoding="utf-8").write(
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n%s\n</urlset>\n'
+        % "\n".join(urls))
 
     htm = pagina(titulo_tag="Blog da Scale Sales &middot; IA, vendas e opera&ccedil;&atilde;o comercial",
                  titulo="Blog da Scale Sales",
