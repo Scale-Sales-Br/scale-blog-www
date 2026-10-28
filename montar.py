@@ -181,6 +181,14 @@ PAGINA = '''<!doctype html>
 <link rel="stylesheet" href="{b}/estilo.css">
 <link rel="alternate" type="application/xml" title="Artigos da Scale Sales" href="{b}/sitemap.xml">
 <script type="application/ld+json">{ld}</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CLJFJRE1CK"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){{dataLayer.push(arguments);}}
+gtag('js', new Date());
+gtag('config', 'G-CLJFJRE1CK');
+</script>
 </head>
 <body>
 {topo}
@@ -206,7 +214,46 @@ def esc(s):
 
 
 # ---------------------------------------------------------------- artigo
-def montar_artigo(meta):
+def relacionados(meta, todos, n=3):
+    """Escolhe n artigos para o bloco 'Leia tambem'.
+
+    Primeiro o mais recente da mesma secao (afinidade de tema); o resto sai de
+    um anel cronologico que comeca no artigo seguinte a este e da a volta.
+    O anel importa: ele espalha os links internos por todos os artigos, em vez
+    de concentrar tudo nos tres mais novos.
+    """
+    outros = sorted([m for m in todos if m["slug"] != meta["slug"]],
+                    key=lambda m: m["data"], reverse=True)
+    if not outros:
+        return []
+    escolhidos, vistos = [], set()
+    mesma = [m for m in outros if m["secao"] == meta["secao"]]
+    if mesma:
+        escolhidos.append(mesma[0]); vistos.add(mesma[0]["slug"])
+    ordem = sorted(todos, key=lambda m: m["data"], reverse=True)
+    pos   = next((i for i, m in enumerate(ordem) if m["slug"] == meta["slug"]), 0)
+    for k in range(1, len(ordem)):
+        m = ordem[(pos + k) % len(ordem)]
+        if len(escolhidos) >= n:
+            break
+        if m["slug"] == meta["slug"] or m["slug"] in vistos:
+            continue
+        escolhidos.append(m); vistos.add(m["slug"])
+    return escolhidos[:n]
+
+
+def bloco_leia(meta, todos):
+    itens = relacionados(meta, todos)
+    if not itens:
+        return ""
+    li = "".join(
+        '<li><a href="{b}/{slug}/"><span>{secao}</span><b>{titulo}</b></a></li>'.format(
+            b=BASE, slug=m["slug"], secao=esc(m["secao"]), titulo=esc(m["titulo"]))
+        for m in itens)
+    return '<nav class="leia" aria-label="Outros artigos"><p>Leia tamb&eacute;m</p><ul>%s</ul></nav>' % li
+
+
+def montar_artigo(meta, todos=None):
     url    = "%s%s/%s/" % (SITE, BASE, meta["slug"])
     ogimg  = "%s%s/%s/capa.jpg" % (SITE, BASE, meta["slug"])
     if not os.path.exists(os.path.join(AQUI, meta["slug"], "capa.jpg")):
@@ -268,6 +315,7 @@ def montar_artigo(meta):
 <article><div class="col">
 {corpo}
 {fontes}
+{leia}
 {convite}
 <div class="autor">
   <img src="{a}/img/socios/beto.webp" alt="Alberto Castilo" width="62" height="62" loading="lazy">
@@ -278,6 +326,7 @@ def montar_artigo(meta):
                            titulo=esc(meta["titulo"]), resumo=esc(meta["resumo"]),
                            data=meta["data"], data_txt=por_extenso(meta["data"]),
                            min=minutos(corpo), capa=capa, corpo=corpo, fontes=fontes,
+                           leia=bloco_leia(meta, todos or [meta]),
                            convite=CONVITE.format(diag=DIAG))
 
     titulo_tag = meta["titulo"]
@@ -355,7 +404,7 @@ def main():
             m = ler(os.path.join(FONTE, f))
             todos.setdefault(m["slug"], m)
     for m in metas:
-        print("artigo:", montar_artigo(m))
+        print("artigo:", montar_artigo(m, list(todos.values())))
     montar_indice(list(todos.values()))
     print("indice: %s%s/ (%d artigos)" % (SITE, BASE, len(todos)))
 

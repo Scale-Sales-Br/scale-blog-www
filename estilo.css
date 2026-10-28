@@ -116,3 +116,19 @@ article blockquote cite{display:block;font-family:var(--sans);font-weight:400;fo
   .cx{flex-direction:column;align-items:flex-start}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none !important}}
+/* leia tambem --------------------------------------------------------- */
+.leia{border-top:1px solid var(--linha);margin-top:clamp(40px,6vh,64px);padding-top:30px}
+.leia>p{font-family:var(--display);font-weight:500;font-size:.72rem;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--mag-soft);margin:0 0 18px}
+.leia ul{list-style:none;padding:0;margin:0;display:grid;gap:11px}
+.leia li{margin:0;padding:0}
+.leia li::marker{content:""}
+.leia a{display:block;border:1px solid var(--linha);background:var(--card);border-radius:14px;
+  padding:16px 19px;text-decoration:none;color:inherit;
+  transition:border-color .5s cubic-bezier(.32,.72,0,1),transform .5s cubic-bezier(.32,.72,0,1)}
+.leia a:hover{border-color:rgba(228,87,249,.45);transform:translateY(-2px)}
+.leia span{display:block;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--dim);margin-bottom:7px}
+.leia b{display:block;font-family:var(--display);font-weight:500;font-size:1.01rem;
+  line-height:1.32;letter-spacing:-.012em;color:var(--tinta)}
+@media (prefers-reduced-motion:reduce){.leia a{transition:none}}
