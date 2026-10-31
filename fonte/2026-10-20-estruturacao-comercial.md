@@ -3,6 +3,7 @@ titulo: Estruturação comercial: o que é, como fazer e por onde começar
 resumo: Não é treinamento de vendas, não é CRM e não é tráfego. É construir a estrutura que faz a venda chegar até o fim. Este texto explica o que é, em que ordem se faz, quais números acompanhar e por que a receita de SDR e playbook costuma estar na ordem errada para quem tem de 2 a 15 vendedores.
 secao: Comercial
 data: 2026-10-20
+atualizado: 2026-10-31
 slug: estruturacao-comercial-o-que-e
 ---
 Estruturação comercial é construir a estrutura que faz a venda chegar até o fim: quem responde, em quanto tempo, com qual critério, o que acontece depois do "vou pensar", quem lembra do cliente na hora da renovação e qual número diz se isso tudo está funcionando.

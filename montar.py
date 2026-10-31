@@ -118,6 +118,11 @@ def ler(caminho):
     for campo in ("titulo", "resumo", "secao", "data", "slug"):
         if not meta.get(campo):
             sys.exit("ERRO: %s sem '%s'" % (os.path.basename(caminho), campo))
+    # 'atualizado' e opcional: a data em que o texto foi revisado. Serve para o
+    # dateModified e para o lastmod do sitemap, que e o sinal que faz o Google
+    # voltar numa pagina que ele ja conhece. Sem ele, reescrever um artigo antigo
+    # nao avisa ninguem. A data de publicacao nunca muda: ela e um fato.
+    meta["revisado"] = meta.get("atualizado") or meta["data"]
     meta["corpo"] = m.group(2)
     return meta
 
@@ -293,7 +298,7 @@ def montar_artigo(meta, todos=None):
         "@graph": [
             {"@type": "Article", "@id": url + "#artigo",
              "headline": meta["titulo"][:110], "description": meta["resumo"],
-             "datePublished": meta["data"], "dateModified": meta["data"],
+             "datePublished": meta["data"], "dateModified": meta["revisado"],
              "inLanguage": "pt-BR", "image": ogimg,
              "articleSection": meta["secao"],
              "mainEntityOfPage": {"@type": "WebPage", "@id": url},
@@ -384,12 +389,12 @@ def montar_indice(metas):
 <div class="w"><div class="grade">{cartoes}</div>{convite}<div style="height:60px"></div></div>'''.format(
         cartoes=cartoes, convite=CONVITE.format(diag=DIAG))
 
-    hoje = max([m["data"] for m in metas], default=datetime.date.today().isoformat())
+    hoje = max([m["revisado"] for m in metas], default=datetime.date.today().isoformat())
     urls = ['<url><loc>%s%s/</loc><lastmod>%s</lastmod>'
             '<changefreq>daily</changefreq><priority>0.9</priority></url>' % (SITE, BASE, hoje)]
     urls += ['<url><loc>%s%s/%s/</loc><lastmod>%s</lastmod>'
              '<changefreq>monthly</changefreq><priority>0.8</priority></url>'
-             % (SITE, BASE, m["slug"], m["data"]) for m in metas]
+             % (SITE, BASE, m["slug"], m["revisado"]) for m in metas]
     io.open(os.path.join(AQUI, "sitemap.xml"), "w", encoding="utf-8").write(
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n%s\n</urlset>\n'
