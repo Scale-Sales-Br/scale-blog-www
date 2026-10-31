@@ -14,3 +14,4 @@
 2026-10-29 · publicado motivo-de-perda-de-venda · artigo de método, sem fonte externa (sem gancho de notícia verificado)
 2026-10-30 · publicado lead-fora-do-horario · artigo de método, sem fonte externa (sem gancho de notícia verificado)
 2026-10-30 · ATENÇÃO · push ok, mas sync e checagem HTTP não executados: proxy da nuvem bloqueia scalesales.com.br (403). Rodar o gatilho manualmente.
+2026-10-31 · publicado reuniao-semanal-de-vendas · artigo de método, sem fonte externa (sem gancho de notícia verificado)
