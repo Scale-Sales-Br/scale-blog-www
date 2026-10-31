@@ -214,21 +214,32 @@ def esc(s):
 
 
 # ---------------------------------------------------------------- artigo
+# Artigo pilar: o unico que disputa de verdade um termo com volume de busca
+# ("estruturacao comercial"). Todo artigo aponta para ele, de proposito, porque
+# link interno concentrado e o que diz ao Google qual pagina do site responde
+# aquele assunto. Espalhar link por igual trata 15 artigos como iguais, e eles
+# nao sao.
+PILAR = "estruturacao-comercial-o-que-e"
+
+
 def relacionados(meta, todos, n=3):
     """Escolhe n artigos para o bloco 'Leia tambem'.
 
-    Primeiro o mais recente da mesma secao (afinidade de tema); o resto sai de
-    um anel cronologico que comeca no artigo seguinte a este e da a volta.
-    O anel importa: ele espalha os links internos por todos os artigos, em vez
-    de concentrar tudo nos tres mais novos.
+    Primeiro o pilar (quando este artigo nao e o pilar); depois o mais recente
+    da mesma secao (afinidade de tema); o resto sai de um anel cronologico que
+    comeca no artigo seguinte a este e da a volta. O anel importa: ele espalha
+    o que sobra por todos os artigos, em vez de concentrar nos tres mais novos.
     """
     outros = sorted([m for m in todos if m["slug"] != meta["slug"]],
                     key=lambda m: m["data"], reverse=True)
     if not outros:
         return []
     escolhidos, vistos = [], set()
-    mesma = [m for m in outros if m["secao"] == meta["secao"]]
-    if mesma:
+    pilar = [m for m in outros if m["slug"] == PILAR]
+    if pilar:
+        escolhidos.append(pilar[0]); vistos.add(PILAR)
+    mesma = [m for m in outros if m["secao"] == meta["secao"] and m["slug"] not in vistos]
+    if mesma and len(escolhidos) < n:
         escolhidos.append(mesma[0]); vistos.add(mesma[0]["slug"])
     ordem = sorted(todos, key=lambda m: m["data"], reverse=True)
     pos   = next((i for i, m in enumerate(ordem) if m["slug"] == meta["slug"]), 0)
