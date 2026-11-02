@@ -17,3 +17,4 @@
 2026-10-31 · publicado reuniao-semanal-de-vendas · artigo de método, sem fonte externa (sem gancho de notícia verificado)
 2026-10-31 · ATENÇÃO · push ok, mas sync e checagem HTTP não executados: proxy da nuvem bloqueia scalesales.com.br. Rodar o gatilho manualmente.
 2026-11-01 · publicado clientes-que-pararam-de-comprar · método (sem gancho de notícia; sem fatos externos)
+2026-11-02 · publicado proposta-enviada-e-silencio · método (sem gancho de notícia; sem fatos externos)
