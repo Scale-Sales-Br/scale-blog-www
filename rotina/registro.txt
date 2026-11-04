@@ -19,3 +19,4 @@
 2026-11-01 · publicado clientes-que-pararam-de-comprar · método (sem gancho de notícia; sem fatos externos)
 2026-11-02 · publicado proposta-enviada-e-silencio · método (sem gancho de notícia; sem fatos externos)
 2026-11-03 · publicado etapas-do-funil-sem-definicao · método (sem gancho de notícia; sem fatos externos)
+2026-11-04 · publicado pipeline-inflado-negocio-parado · método (sem gancho de notícia; sem fatos externos)
