@@ -61,6 +61,13 @@ article blockquote cite{display:block;font-family:var(--sans);font-weight:400;fo
 .nota p{margin:0;font-size:.99rem;color:var(--mut)}
 .nota p+p{margin-top:12px}
 .nota b{color:var(--tinta)}
+.tabela{overflow-x:auto;margin:26px 0;border:1px solid var(--linha);border-radius:14px}
+.tabela table{width:100%;min-width:620px;border-collapse:collapse;font-size:.92rem;line-height:1.5}
+.tabela th,.tabela td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--linha)}
+.tabela thead th{font-family:var(--display);font-weight:600;color:var(--tinta);background:var(--card)}
+.tabela tbody th{font-weight:600;color:var(--tinta)}
+.tabela td{color:#E4DBF7}
+.tabela tr:last-child th,.tabela tr:last-child td{border-bottom:0}
 .lista-marco{list-style:none;padding:0;margin:26px 0;display:grid;gap:11px}
 .lista-marco li{display:flex;gap:14px;align-items:flex-start;border:1px solid var(--linha);
   background:var(--card);border-radius:13px;padding:15px 18px;margin:0;font-size:.99rem}

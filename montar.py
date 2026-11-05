@@ -20,7 +20,10 @@ Cada artigo e um .md em fonte/ com cabecalho de metadados:
 
 Markdown aceito: ##, ###, paragrafo, - lista, 1. lista, > citacao
 (com "-- autor" na ultima linha), **negrito**, *italico*, [texto](url),
-:::nota ... ::: e :::marcos ... ::: (lista numerada em cartoes).
+:::nota ... :::, :::marcos ... ::: (lista numerada em cartoes) e tabela com
+| coluna | coluna | (a primeira linha e o cabecalho; a linha |---|---| e opcional).
+
+Uma secao "## Perguntas ..." com ### terminando em "?" vira FAQPage no JSON-LD.
 """
 import io, os, re, sys, html, json, datetime
 
@@ -66,6 +69,21 @@ def corpo_html(txt):
             else:
                 saida.append('<div class="nota">%s</div>' %
                              "".join('<p>%s</p>' % em_linha(x) for x in itens))
+            continue
+
+        if ln.startswith("|"):                         # tabela
+            bloco = []
+            while i < len(linhas) and linhas[i].startswith("|"):
+                cels = [c.strip() for c in linhas[i].strip().strip("|").split("|")]
+                if not all(re.match(r'^:?-+:?$', c) for c in cels):
+                    bloco.append(cels)
+                i += 1
+            cab = "".join('<th scope="col">%s</th>' % em_linha(c) for c in bloco[0])
+            lin = "".join("<tr>%s</tr>" % "".join(
+                ('<th scope="row">%s</th>' if n == 0 else "<td>%s</td>") % em_linha(c)
+                for n, c in enumerate(cels)) for cels in bloco[1:])
+            saida.append('<div class="tabela"><table><thead><tr>%s</tr></thead>'
+                         '<tbody>%s</tbody></table></div>' % (cab, lin))
             continue
 
         if ln.startswith("### "):
@@ -125,6 +143,27 @@ def ler(caminho):
     meta["revisado"] = meta.get("atualizado") or meta["data"]
     meta["corpo"] = m.group(2)
     return meta
+
+
+def perguntas(txt):
+    """Pares (pergunta, resposta) da secao '## Perguntas ...', para o FAQPage.
+    Sai do proprio texto visivel: marcacao que diz uma coisa e pagina que mostra
+    outra e o que o Google pune."""
+    pares, na_secao, atual = [], False, None
+    for ln in txt.split("\n"):
+        ln = ln.strip()
+        if ln.startswith("## "):
+            na_secao = ln[3:].lower().startswith("perguntas"); atual = None
+        elif not na_secao or ln.startswith(":::"):
+            if ln.startswith(":::"): atual = None
+        elif ln.startswith("### "):
+            atual = None
+            if ln.endswith("?"):
+                atual = [ln[4:], []]; pares.append(atual)
+        elif ln and atual:
+            atual[1].append(ln)
+    limpo = lambda t: re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', t).replace("*", "")
+    return [(limpo(q), limpo(" ".join(r))) for q, r in pares if r]
 
 
 def por_extenso(d):
@@ -293,9 +332,12 @@ def montar_artigo(meta, todos=None):
         capa = ('<figure class="capa col"><img src="%s/%s" alt="%s" width="1408" height="768" '
                 'fetchpriority="high"></figure>' % (ASSET, meta["capa"].lstrip("/"), esc(meta["titulo"])))
 
+    faq = perguntas(meta["corpo"])
     ld = json.dumps({
         "@context": "https://schema.org",
-        "@graph": [
+        "@graph": ([{"@type": "FAQPage", "@id": url + "#perguntas", "mainEntity": [
+            {"@type": "Question", "name": q,
+             "acceptedAnswer": {"@type": "Answer", "text": r}} for q, r in faq]}] if faq else []) + [
             {"@type": "Article", "@id": url + "#artigo",
              "headline": meta["titulo"][:110], "description": meta["resumo"],
              "datePublished": meta["data"], "dateModified": meta["revisado"],
