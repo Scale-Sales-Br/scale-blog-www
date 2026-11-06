@@ -21,3 +21,4 @@
 2026-11-03 · publicado etapas-do-funil-sem-definicao · método (sem gancho de notícia; sem fatos externos)
 2026-11-04 · publicado pipeline-inflado-negocio-parado · método (sem gancho de notícia; sem fatos externos)
 2026-11-05 · publicado origem-do-lead-sem-registro · método (sem gancho de notícia; sem fatos externos)
+2026-11-06 · publicado previsao-de-vendas-sem-base · método (sem gancho de notícia; sem fatos externos)
