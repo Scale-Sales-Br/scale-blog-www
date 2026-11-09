@@ -3,6 +3,7 @@ titulo: De onde vem o seu cliente? A origem do lead que ninguém registra e o di
 resumo: Sem saber de que canal veio cada venda, o dono decide onde investir no escuro. Como registrar a origem do lead no WhatsApp e cruzar com o que fechou.
 secao: Marketing
 data: 2026-11-05
+atualizado: 2026-11-09
 slug: origem-do-lead-sem-registro
 ---
 Pergunte ao seu time comercial: dos clientes que fecharam no último mês, quantos vieram de cada canal? Anúncio, indicação, Instagram, busca, cliente antigo que voltou.
@@ -55,6 +56,8 @@ Desconfie do próprio resultado. Com amostra pequena, um canal pode parecer bom 
 ## O que muda na decisão
 
 Com a origem ligada ao resultado, a conversa de investimento muda de pergunta. Deixa de ser "quantos contatos esse canal trouxe?" e passa a ser "quanto vendeu cada canal, e em quanto tempo?".
+
+Isso vale em especial para a indicação. Quando ela aparece entre os canais que mais vendem, merece regra e registro como qualquer outro canal. Um [programa de indicação de clientes](https://cartao.scalesales.com.br/) faz isso: cada convite sai com o nome de quem indicou.
 
 E a conversa entre marketing e vendas melhora. Quando vendas diz que o lead é ruim, passa a existir um jeito de conferir: de quais canais, em que etapa morreram, por qual motivo.
 

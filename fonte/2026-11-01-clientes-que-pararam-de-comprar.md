@@ -3,6 +3,7 @@ titulo: Clientes que pararam de comprar: a lista que quase ninguém olha
 resumo: A base de quem já comprou é a lista mais barata de contatar e a menos acompanhada. Como descobrir quem parou de comprar, por que parou, e montar uma rotina simples de reativação sem comprar ferramenta.
 secao: Vendas
 data: 2026-11-01
+atualizado: 2026-11-09
 slug: clientes-que-pararam-de-comprar
 ---
 Quase toda operação comercial olha para frente: o lead novo, a proposta da semana, a meta do mês. Quase nenhuma olha para trás, para quem já comprou e deixou de aparecer.
@@ -59,6 +60,8 @@ Nenhum desses achados depende de ferramenta. Dependem de alguém olhar a data.
 7. **Reveja a lista uma vez por mês,** com data marcada.
 
 Em dois ou três ciclos, a lista mostra algo que o relato do vendedor não mostra: em que ponto da relação os clientes costumam parar.
+
+Para quem atende consumidor final ou negócio local, a mesma base pode ir além da reativação. Um [clube de benefícios](https://cartao.scalesales.com.br/) dá ao cliente um motivo para voltar e um jeito simples de trazer outra pessoa, sem depender de alguém lembrar de ligar.
 
 ## O limite da planilha
 
