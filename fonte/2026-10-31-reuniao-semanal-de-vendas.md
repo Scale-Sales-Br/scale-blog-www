@@ -3,6 +3,7 @@ titulo: Reunião semanal de vendas: pare de perguntar "como estão as coisas?"
 resumo: A reunião comercial costuma virar rodada de relato de cada vendedor. Quando a informação está na cabeça de quem fala, o gestor só ouve versões. Como reorganizar a reunião em torno de perguntas que o dado responde.
 secao: Processos comerciais
 data: 2026-10-31
+atualizado: 2026-11-12
 slug: reuniao-semanal-de-vendas
 ---
 Quase toda operação comercial tem uma reunião semanal. Na maioria delas, o gestor pergunta "e aí, como estão as coisas?" e cada vendedor responde em um minuto, com a versão que quer contar.
@@ -63,6 +64,8 @@ Em quatro semanas, a planilha mostra algo que nenhum relato mostra: onde as conv
 Ela depende de o vendedor preencher. Se preencher é um favor ao gestor, vai falhar em algumas semanas. Se preencher é o que prepara a própria reunião do vendedor, tende a se manter.
 
 Quando a quantidade de conversas cresce, copiar do WhatsApp para a planilha vira o gargalo. Esse sintoma é a informação dizendo que precisa sair da conversa por conta própria, sem depender de digitação.
+
+Reunião que lê dado em vez de ouvir relato é sinal de uma área comercial estruturada. O caminho completo está no [guia de estruturação comercial](/blog/estruturacao-comercial-o-que-e/).
 
 :::nota
 É a lógica da **TelemetrIA**: a conversa vira informação, a informação vira visibilidade, e a visibilidade muda o que o gestor consegue perguntar. Medir primeiro, construir depois.

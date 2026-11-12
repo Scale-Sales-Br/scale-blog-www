@@ -3,6 +3,7 @@ titulo: Proposta enviada e o cliente sumiu: o que fazer na semana seguinte
 resumo: Depois que a proposta sai, muitas vendas morrem em silêncio, sem que ninguém decida isso. O follow-up depende de memória e de coragem do vendedor. Como transformar o pós-proposta em rotina com data, motivo e regra de encerramento.
 secao: Vendas
 data: 2026-11-02
+atualizado: 2026-11-12
 slug: proposta-enviada-e-silencio
 ---
 Existe um momento em quase toda venda pelo WhatsApp em que a proposta vai, o cliente responde "vou analisar" e a conversa para. A partir dali, ninguém decide nada. A venda não é fechada nem perdida. Fica parada.
@@ -65,6 +66,8 @@ Na semana seguinte, olhe a lista na reunião. Você vai ver quantas propostas es
 ## O limite do controle manual
 
 A lista funciona enquanto o volume é pequeno. Com muitas conversas, atualizar a planilha vira trabalho extra e o vendedor deixa de fazer. O sinal de que a conversa precisa alimentar o registro sozinha é quando a lista começa a ficar sempre desatualizada.
+
+O pós-proposta é uma etapa de um processo maior. Se a sua empresa ainda não tem esse processo desenhado, comece pelo [guia de estruturação comercial](/blog/estruturacao-comercial-o-que-e/).
 
 :::nota
 É a lógica da **TelemetrIA**: a conversa vira informação, a informação vira visibilidade, e a visibilidade permite ao gestor agir antes que o silêncio decida pela venda. Medir primeiro, construir depois.

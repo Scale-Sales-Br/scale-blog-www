@@ -3,6 +3,7 @@ titulo: Diagnóstico comercial: as seis perguntas que revelam onde a sua receita
 resumo: Seis perguntas, respondidas com número e não com opinião. Quem não consegue responder quatro delas não tem problema de vendas, tem problema de visibilidade.
 secao: Comercial
 data: 2026-10-16
+atualizado: 2026-11-12
 slug: diagnostico-comercial-seis-perguntas
 ---
 Diagnóstico comercial é descobrir, em número, onde a venda que já estava ao seu alcance está se perdendo. Não é auditoria, não é consultoria de três meses e não começa com reunião de alinhamento. Começa com seis perguntas.
@@ -64,6 +65,8 @@ Escolha a pergunta cuja resposta mais te incomodou e faça três coisas:
 3. Meça de novo, com a mesma conta, e compare.
 
 Trinta dias e uma frase. Se mexer assim, vai mexer muito mais quando a estrutura segurar a regra sozinha, sem depender de ninguém lembrar.
+
+As seis perguntas são o começo. O passo seguinte é transformar as respostas em regra que funcione todo dia, e é disso que trata o [guia de estruturação comercial](/blog/estruturacao-comercial-o-que-e/).
 
 :::nota
 A **TelemetrIA** é esse diagnóstico feito com instrumento em vez de planilha, e estendido à operação inteira: processo comercial, atendimento, gestão de tarefas, desempenho individual, pós-venda e rotina financeira. Medir primeiro, construir depois.

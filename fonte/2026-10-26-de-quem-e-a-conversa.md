@@ -3,6 +3,7 @@ titulo: De quem é a conversa com o cliente? O risco de a sua base de clientes m
 resumo: Quando o histórico do cliente está no WhatsApp pessoal de cada vendedor, a empresa não é dona da própria carteira. Uma decisão de tecnologia simples muda isso, e começa antes de comprar ferramenta.
 secao: Tecnologia
 data: 2026-10-26
+atualizado: 2026-11-12
 slug: de-quem-e-a-conversa-com-o-cliente
 ---
 Uma pergunta que vale fazer em qualquer operação que vende pelo WhatsApp: se o seu melhor vendedor pedir demissão amanhã, o que fica na empresa?
@@ -56,6 +57,8 @@ Essas respostas dizem se a urgência é alta, e ajudam a decidir quanto vale inv
 ## Por que isso é tecnologia e é gestão
 
 Tecnologia, aqui, não é novidade. É o que permite que a conversa vire informação, a informação fique visível e a visibilidade permita gerir. Sem o primeiro passo, os outros dois dependem de pedir favor.
+
+Decidir onde a conversa mora é uma das primeiras escolhas de quem vai [estruturar a área comercial](/blog/estruturacao-comercial-o-que-e/).
 
 :::nota
 Descobrir onde a sua conversa mora e o que se perde nela faz parte da **TelemetrIA**: medir como a operação realmente funciona antes de propor qualquer ferramenta. Medir primeiro, construir depois.

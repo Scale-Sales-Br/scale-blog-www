@@ -3,6 +3,7 @@ titulo: Toda conversa de venda precisa terminar com um próximo passo datado
 resumo: A maior parte das vendas não se perde numa negativa. Se perde numa conversa que terminou sem combinado. Uma regra simples, aplicada a cada atendimento, muda o que o gestor consegue enxergar.
 secao: Vendas
 data: 2026-10-28
+atualizado: 2026-11-12
 slug: proximo-passo-datado
 ---
 Quando se pergunta a uma equipe por que uma venda não saiu, a resposta costuma ser "o cliente sumiu". Raramente é isso. Na maior parte das vezes, a conversa terminou sem que ninguém combinasse o que viria depois. O cliente disse que ia ver, o vendedor disse que ficava no aguardo, e os dois acharam que o outro retomaria.
@@ -54,6 +55,8 @@ Comece com um vendedor ou com uma semana. Se a regra funcionar no pequeno, ela s
 ## Como medir se funcionou
 
 Antes de começar, conte quantas negociações abertas estão sem próximo passo. Faça a mesma contagem depois de trinta dias. Compare também o tempo entre a primeira conversa e o desfecho, ganhando ou perdendo. Não prometo um número, porque ele depende da sua operação. Mas a contagem mostra, com os seus dados, se a regra está mudando algo.
+
+O próximo passo datado é a regra mais simples de uma [estrutura comercial](/blog/estruturacao-comercial-o-que-e/) e costuma ser a primeira que vale implantar.
 
 :::nota
 É o raciocínio da **TelemetrIA** aplicado ao dia a dia do vendedor: transformar a conversa em informação visível para que o gestor decida com número e não com impressão. Medir primeiro, construir depois.

@@ -3,6 +3,7 @@ titulo: Passagem de bastão: onde a informação do cliente se perde dentro da s
 resumo: Entre o primeiro contato e o fechamento, o cliente passa por duas ou três pessoas. Cada troca é um ponto onde o que ele disse some. Dá para fechar esse buraco com um registro mínimo, sem comprar nada.
 secao: Processos Comerciais
 data: 2026-10-23
+atualizado: 2026-11-12
 slug: passagem-de-bastao-comercial
 ---
 Na maior parte das operações comerciais, o cliente não fala com uma pessoa só. Fala com quem atendeu o anúncio, depois com quem qualifica, depois com o vendedor, e mais tarde com quem cuida da entrega ou da renovação. Cada troca de pessoa é uma passagem de bastão.
@@ -51,6 +52,8 @@ Esse número é um diagnóstico, e é seu. Ninguém precisa auditar. Se a maiori
 ## O que isso diz sobre a operação
 
 A espinha de qualquer operação comercial é a mesma: a conversa gera informação, a informação precisa ficar visível, e a visibilidade é o que permite gerir. A passagem de bastão é o ponto onde a primeira etapa vira a segunda. Se ela falha, o gestor passa a decidir olhando um funil que não reflete o que os clientes disseram.
+
+A passagem de bastão é uma das peças. Para ver como ela se encaixa no resto da operação, do primeiro contato ao pós-venda, leia [o que é estruturação comercial](/blog/estruturacao-comercial-o-que-e/).
 
 :::nota
 É esse tipo de ponto cego que a **TelemetrIA** procura. Medir primeiro onde a informação se perde, e só depois decidir se o remédio é um processo mais claro, uma ferramenta ou nenhuma das duas coisas. Medir primeiro, construir depois.

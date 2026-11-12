@@ -3,6 +3,7 @@ titulo: Implantação de CRM: por que a maioria trava no terceiro mês
 resumo: O CRM não é abandonado por ser ruim. É abandonado porque foi implantado como software, quando o problema era de processo. Dá para prever a queda antes dela acontecer.
 secao: Comercial
 data: 2026-10-15
+atualizado: 2026-11-12
 slug: implantacao-de-crm-por-que-trava
 ---
 A história se repete com uma regularidade quase cômica. Mês um: todo mundo animado, telas bonitas, treinamento feito. Mês dois: o preenchimento começa a atrasar. Mês três: a informação que vale está de novo no WhatsApp pessoal de cada vendedor, e o CRM virou uma tela que o dono abre para se decepcionar.
@@ -54,6 +55,8 @@ Marque no calendário noventa dias depois de ligar o sistema e faça uma verific
 3. A pergunta do mês tem resposta, e a resposta bate com o que você sente que está acontecendo?
 
 Três sins, está implantado. Dois, dá para corrigir. Um ou nenhum, pare de insistir no treinamento e volte ao processo, porque é lá que está o defeito.
+
+Processo antes de sistema é a ordem de toda [estruturação comercial](/blog/estruturacao-comercial-o-que-e/): primeiro se define quem faz o quê e em que momento, depois se escolhe onde isso vai morar.
 
 :::nota
 CRM é onde o processo mora. Se o processo não existe, o CRM é um caderno caro. A gente mede a operação antes de recomendar qualquer sistema, e às vezes a medição mostra que o problema não era o CRM.
