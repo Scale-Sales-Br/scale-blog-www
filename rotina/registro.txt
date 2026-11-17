@@ -32,3 +32,4 @@
 2026-11-14 · publicado dois-vendedores-o-mesmo-cliente · método (sem gancho de notícia; sem fatos externos)
 2026-11-15 · publicado ciclo-de-venda-onde-o-tempo-se-perde · método (sem gancho de notícia; sem fatos externos)
 2026-11-16 · publicado vendedor-de-ferias-quem-atende-a-carteira · método (sem gancho de notícia; sem fatos externos)
+2026-11-17 · publicado reclamacao-de-cliente-que-fica-na-conversa · método (sem gancho de notícia; sem fatos externos)
