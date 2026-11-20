@@ -35,3 +35,4 @@
 2026-11-17 · publicado reclamacao-de-cliente-que-fica-na-conversa · método (sem gancho de notícia; sem fatos externos)
 2026-11-18 · publicado objecoes-que-se-repetem-e-ninguem-soma · método (sem gancho de notícia; sem fatos externos)
 2026-11-19 · publicado cliente-que-so-pergunta-o-preco · método (sem gancho de notícia; sem fatos externos; busca de notícia sem fato verificável nos últimos 7 dias)
+2026-11-20 · publicado leads-antigos-que-nunca-fecharam · método (sem gancho de notícia; sem fatos externos; busca de notícia não feita, método é a opção normal)
