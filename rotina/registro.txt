@@ -43,3 +43,4 @@
 2026-11-25 · publicado o-que-o-melhor-vendedor-faz-e-ninguem-sabe · método (sem gancho de notícia; sem fatos externos; busca de notícia não feita, método é a opção normal)
 2026-11-26 · publicado quantos-clientes-cada-vendedor-aguenta · método (sem gancho de notícia; sem fatos externos; busca de notícia não feita, método é a opção normal)
 2026-11-27 · publicado cliente-conta-a-mesma-coisa-duas-vezes · método (sem gancho de notícia; sem fatos externos; busca de notícia não feita, método é a opção normal)
+2026-11-28 · publicado cliente-espera-resposta-de-outra-area · método (sem gancho de notícia; sem fatos externos; busca de notícia não feita, método é a opção normal)
